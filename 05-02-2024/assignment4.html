@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>
+    Assignment 4: Simple Interest Calculator
+
+</h1>
+
+    
+</body>
+<script>
+
+let principal_amount = prompt(" Simple Interest Calculator \n Enter the Principal Amount");
+let rate_of_interest = prompt(" Simple Interest Calculator \n Enter the Rate of Interest Per Annum ");
+let time_period = prompt("Simple Intereset Calculator \n Enter the Time Period in Year ")
+
+principal_amount = parseFloat(principal_amount);
+rate_of_interest = parseFloat(rate_of_interest);
+time_period = parseFloat(time_period);
+let ans = principal_amount *rate_of_interest * time_period /100
+
+alert(`Simple Interest Calculator \n Simple Interest is ${ans} `)
+
+</script>
+</html>
