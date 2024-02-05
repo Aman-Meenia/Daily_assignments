@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgba(30,37,50);
+    height: 100vh;
+}
+
+#header{
+    background-color: rgba(30,37,50);
+    width:100%;
+    height: 10vh;
+   
+  
+
+}
+
+.container{
+    padding-left: 10%;
+    padding-right: 10%;
+    font-size: 10px;
+    
+}
+
+h1{
+    color: white;
+}
+nav{
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap:10vh;
+
+}
+nav ul li a{
+    color: white;
+text-decoration: none;
+}
+
+nav ul li a:hover{
+    color: darkgoldenrod;
+    transition: 0s;
+}
+#Home a{
+    color: darkgoldenrod;
+}
+
+
+ /*  content */
+
+
+ .data{
+color: white;
+width: 100%;
+
+ }
+
+ .about{
+    display: flex;
+width: 100%;
+height: 80vh;
+ }
+
+ .content{
+
+    height: 20h;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+ }
+
+.data{
+    /* display: flex / */
+margin: 10vh;
+    width: 60%;
+}
+.data h1{
+    width: 40vw;
+}
+
+.image .circle{
+    /* width: 100%; */
+    width: 30%;
+    background-color: blue ;
+    aspect-ratio: 1;
+position: absolute;
+border-radius: 50%;
+top: 20vh;
+right:5vh;
+}
+
+.circle{
+
+    background-size: 100%;
+    width: 25rem;
+    background-image: url("aman.jpg");
+
+}
+
+
+
+/* footer */
+#icons{
+    display: flex;
+    padding: 20px;
+    color: white;
+    justify-content: space-between;
+    font-size: 1.4rem;
+}
+#icons a{
+    color: white;
+}
+
+#copy_right{
+    display: flex;
+justify-content: center;
+}
+
+#copyright{
+color: white;
+font-size: 1.3rem;
+padding-bottom: 10px;
+}
+
+
