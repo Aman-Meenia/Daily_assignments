@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Assignment 6: Using switch for Menu Selection</h1>
+
+
+    
+</body>
+
+<script>
+
+
+let num ;
+do{
+    num = prompt(" Enter the number for type of operation you want to do \n For Addition press 1 \n For Subtraction press 2 \n For Multiplication press 3 \n For Division press 4")
+}while(isNaN(num)||num<1 ||num>4)
+
+    let a =+prompt("Enter the first number");
+    let b =+prompt("Enter the second number");
+
+num = parseFloat(num)
+    switch(num){
+   case 1:
+    alert("Otuput is "+(a+b));
+    break;
+    case 2:
+    alert("Otuput is "+(a-b));
+    break;
+    case 3:
+    alert("Otuput is "+(a*b));
+    break;
+    case 4:
+    alert("Otuput is "+(a/b));
+    }
+
+
+</script>
+
+</html>

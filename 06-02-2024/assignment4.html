@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>
+
+    Assignment 4: Number Guessing Game with Replay Feature
+</h1>
+
+
+
+
+</body>
+
+<script>
+
+
+
+
+let num;
+
+
+
+
+let play ;
+play = prompt("Enter 1 for playing the Guessing Game or press any other thing for exit the Game")
+while(play==1){
+   
+let guess_num;
+let cnt = 0;
+num = Math.floor(Math.random() * 100)+1;
+// console.log(num);
+ do{
+    guess_num= prompt(" Guess the number between 1 and 100 ")
+
+    if(guess_num>num){
+        alert(`Number is too high`)
+    }else if(guess_num<num){
+        alert(`Number is too low`)
+    }
+cnt++;
+    }while(num!=guess_num)
+
+
+    alert(`YOU GUESS NUMBER IN ${cnt} MOVES`)
+
+    play = prompt("Enter 1 for  Again playing the Guessing Game or press any other thing for exit the Game")
+}
+
+
+
+
+
+</script>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        Assignment 5: Advanced Loop - Multiplication Table
+    </h1>
+</body>
+<script>
+
+
+
+let n;
+   
+do{
+    n = prompt("Enter the number of which you want to print Multiplication Table")
+}while(isNaN(n));
+n=parseInt(n);
+console.log(n);
+console.log(`Table of ${n} is `)
+
+    for(let i=1; i<=10; i++){
+        console.log(`${n} * ${i}= ${n*i} `);
+    }
+
+
+
+</script>
+</html>

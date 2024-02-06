@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Assignment 2: Grade Calculator    </h1>
+
+
+</body>
+
+<script>
+
+let num;
+
+
+// let cnd= true;
+do {
+num = prompt("Enter the Marks Between 0 to 100");
+num = parseFloat(num)
+}while(isNaN(num) || num>100 || num<0);
+
+
+if(num>=90){
+    alert(`Grade Acoording to Marks is A`)
+}else if(num>=80){
+    alert(`Grade Acoording to Marks is B`)
+}else if(num>=70){
+    alert(`Grade Acoording to Marks is C`)
+}else if(num>=60){
+    alert(`Grade Acoording to Marks is D`)
+}else if(num<60){
+    alert(`Grade Acoording to Marks is F`)
+}
+
+
+
+
+
+</script>
+</html>
