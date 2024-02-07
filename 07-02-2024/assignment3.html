@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>
+
+    Assignment 3: Number Guessing Game with Replay Feature
+</h1>
+
+
+
+
+</body>
+
+<script>
+
+let cnt = 0;
+check_guess_val_equal = (guess_num ,num )=>{
+    guess_num= prompt(" Guess the number between 1 and 100 ")
+    cnt++;
+    if (num==guess_num) return  ;
+    if(guess_num>num){
+        alert(`Number is too high`)
+    }else if(guess_num<num){
+        alert(`Number is too low`)
+    }
+check_guess_val_equal(guess_num,num )
+}
+
+
+
+let num;
+
+let arr = new Array();
+
+No_of_time_game_play = ()=>{
+    let play ;
+play = prompt("Enter 1 for playing the Guessing Game or press any other thing for exit the Game")
+if(play==1){
+let guess_num;
+num = Math.floor(Math.random() * 100)+1;
+console.log(" Number is "+num)
+cnt = 0;
+  check_guess_val_equal(guess_num,num);
+  arr.push(cnt);
+    alert(`YOU GUESS NUMBER IN ${cnt} MOVES`)
+    No_of_time_game_play()
+}else{
+    return ;
+}
+}
+
+No_of_time_game_play()
+
+
+
+if(arr.length>0){
+console.log("<--  Performance in  every round --> ");
+
+for(let i=0; i<arr.length; i++){
+    console.log(`Performance in round ${i+1} is  ${arr[i]}`);
+}
+}
+
+</script>
+</html>

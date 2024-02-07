@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<h1> Assignment 2
+</h1>
+<body>
+
+    <script>
+
+    let arr = new Array();
+
+    arr.push("aman");
+    arr.push("fji");
+    arr.push(378);
+    arr.push("ad");
+    arr.push(122);
+    arr.push(12);
+    arr.push("1253");
+    arr.push(NaN);
+
+let sum =0;
+    arr.forEach(it => {
+        if(typeof it=='number' && !isNaN(it)){
+console.log(it);
+            sum+=it;
+        }
+        
+    });
+console.log(`sum is ${sum}`)
+
+
+
+    </script>
+    
+</body>
+</html>
