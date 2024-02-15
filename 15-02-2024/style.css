@@ -1,0 +1,23 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {background-color: #f2f2f2;}
+
+
+  #user_data_table,#post_data_table ,#todos_data_table{
+    display:none;
+  }
+
+  button{
+height: 30px;
+padding: 5px;
+border-radius: 10px;
+margin: 5px;
+  }
