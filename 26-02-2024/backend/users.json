@@ -1,0 +1,130 @@
+[
+  {
+    "id": 2,
+    "title": "Prepare Presentation Slides",
+    "description": "Create slides for the upcoming presentation.",
+    "completed": true
+  },
+  {
+    "id": 3,
+    "title": "Review Code Changes",
+    "description": "Review recent code changes and provide feedback.",
+    "completed": false
+  },
+  {
+    "id": 4,
+    "title": "Schedule Meeting with Client",
+    "description": "Arrange a meeting with the client to discuss project updates.",
+    "completed": false
+  },
+  {
+    "id": 5,
+    "title": "Test New Software Release",
+    "description": "Conduct testing on the latest software release.",
+    "completed": true
+  },
+  {
+    "id": 6,
+    "title": "Update User Documentation",
+    "description": "Revise and update user documentation based on recent changes.",
+    "completed": false
+  },
+  {
+    "id": 7,
+    "title": "It Starts With Us",
+    "description": "Description: In this compelling narrative, author [Author Name] delves into the intricacies of human relationships, exploring the profound impact that our actions and choices have on ourselves and those around us. Set against the backdrop of [Setting], the story follows [Main Character] as they navigate the complexities of love, friendship, and forgiveness. As secrets unravel and truths are revealed, the characters confront their pasts and strive to forge a brighter future. Through moments of joy, heartache, and redemption, 'It Starts With Us' reminds us that change begins from within, and that the power to create a better world lies in our hands",
+    "completed": true
+  },
+  {
+    "id": 8,
+    "title": "Research Market Trends",
+    "description": "Gather information on current market trends for analysis.",
+    "completed": false
+  },
+  {
+    "id": 9,
+    "title": "Prepare Monthly Report",
+    "description": "Compile data and statistics for the monthly report.",
+    "completed": false
+  },
+  {
+    "id": 10,
+    "title": "Arrange Training Session",
+    "description": "Organize a training session for team members.",
+    "completed": true
+  },
+  {
+    "id": 11,
+    "title": "Code Refactoring",
+    "description": "Refactor codebase to improve performance and maintainability.",
+    "completed": false
+  },
+  {
+    "id": 12,
+    "title": "It Starts With Us",
+    "description": "Description: In this compelling narrative, author [Author Name] delves into the intricacies of human relationships, exploring the profound impact that our actions and choices have on ourselves and those around us. Set against the backdrop of [Setting], the story follows [Main Character] as they navigate the complexities of love, friendship, and forgiveness. As secrets unravel and truths are revealed, the characters confront their pasts and strive to forge a brighter future. Through moments of joy, heartache, and redemption, 'It Starts With Us' reminds us that change begins from within, and that the power to create a better world lies in our hands",
+    "completed": true
+  },
+  {
+    "id": 13,
+    "title": "It Starts With Us",
+    "description": "Description: In this compelling narrative, author [Author Name] delves into the intricacies of human relationships, exploring the profound impact that our actions and choices have on ourselves and those around us. Set against the backdrop of [Setting], the story follows [Main Character] as they navigate the complexities of love, friendship, and forgiveness. As secrets unravel and truths are revealed, the characters confront their pasts and strive to forge a brighter future. Through moments of joy, heartache, and redemption, 'It Starts With Us' reminds us that change begins from within, and that the power to create a better world lies in our hands",
+    "completed": false
+  },
+  {
+    "id": 14,
+    "title": "Conduct Customer Survey",
+    "description": "Design and conduct a survey to gather feedback from customers.",
+    "completed": false
+  },
+  {
+    "id": 15,
+    "title": "Update Website Content",
+    "description": "Refresh website content to reflect latest products and services.",
+    "completed": true
+  },
+  {
+    "id": 16,
+    "title": "Implement Security Measures",
+    "description": "Enhance security protocols to protect against potential threats.",
+    "completed": false
+  },
+  {
+    "id": 17,
+    "title": "Evaluate Vendor Proposals",
+    "description": "Review proposals from potential vendors for a new project.",
+    "completed": true
+  },
+  {
+    "id": 18,
+    "title": "Hire New Employee",
+    "description": "Recruit and hire a new employee to fill a vacant position.",
+    "completed": false
+  },
+  {
+    "id": 19,
+    "title": "Arrange Team Building Activity",
+    "description": "Plan a team building activity to foster camaraderie.",
+    "completed": true
+  },
+  {
+    "id": 20,
+    "title": "Update Operating Systems",
+    "description": "Install latest updates and patches for operating systems.",
+    "completed": false
+  },
+  {},
+  {
+    "id": 123,
+    "title": "adadfa",
+    "description": "ajfajdkajdkajsdk",
+    "completed": false
+  },
+  {
+    "id": 1233,
+    "title": "It Starts With Us",
+    "description": "Description: In this compelling narrative, author [Author Name] delves into the intricacies of human relationships, exploring the profound impact that our actions and choices have on ourselves and those around us. Set against the backdrop of [Setting], the story follows [Main Character] as they navigate the complexities of love, friendship, and forgiveness. As secrets unravel and truths are revealed, the characters confront their pasts and strive to forge a brighter future. Through moments of joy, heartache, and redemption, 'It Starts With Us' reminds us that change begins from within, and that the power to create a better world lies in our hands",
+    "completed": false
+  }
+]
+
