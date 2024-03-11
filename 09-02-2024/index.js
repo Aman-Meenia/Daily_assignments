@@ -1,5 +1,21 @@
+let library = [];
+// update data function
 
-const library = [];
+const update_data=()=>{
+    localStorage.setItem("lib",JSON.stringify(library));
+}
+
+// get data function
+window.addEventListener('load', ()=>{
+    console.log("Data");
+    library= JSON.parse(localStorage.getItem("lib"))??[];
+    console.log(library)
+
+})
+
+
+
+
 function createbook(id, title, author) {
     this.id = id,
         this.author = author,
@@ -38,6 +54,7 @@ const borrowingBooks = (id) => {
         else {
             library[index_no].isBorrowed = true;
             console.log(`Book is present and you Borrowed that book  `);
+            update_data()
             return true;
         }
     } else {
@@ -51,6 +68,7 @@ const returningBooks = (id) => {
     let index_no = isPresent(id);
     if (index_no != -1 && library[index_no].isBorrowed == true) {
         library[index_no].isBorrowed = false;
+        update_data()
         console.log(`Book with id ${id} is returned successfully`)
         return true;
     } else {
@@ -226,6 +244,7 @@ submit_add_book.addEventListener("click", (event) => {
     bookId.value = "";
     bookTitle.value = "";
     bookAuthor.value = "";
+    update_data()
 })
 
 
@@ -296,6 +315,7 @@ console.log("Borrow");
     row.appendChild(c5);
     table.querySelector('tbody').appendChild(row)
 
+
 }
 
 // staus button for borrow and return book
@@ -341,7 +361,7 @@ btn2.addEventListener('click', (event) => {
         btn2.style.color = "red";
         show2_visible.style.display = "block";
     }
-
+    update_data()
 })
 
 

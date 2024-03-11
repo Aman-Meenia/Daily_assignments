@@ -13,9 +13,9 @@ import crudRoutes from "./routes/crudRoute.js";
 
 app.use("/api/users/", crudRoutes);
 
-app.get("/api/users/data", (req, res) => {
-  res.send("Hello");
-});
+// app.get("/api/users/data", (req, res) => {
+//   res.send("Hello");
+// });
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
