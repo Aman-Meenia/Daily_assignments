@@ -1,11 +1,12 @@
 import Book from "../models/bookModel.js";
+import mongoose from "mongoose";
 
 // <-------------------------Add Book ----------------------------------->
 export const addBook = async (req, res) => {
   try {
-    const { title, author, rating, genre, quantity } = req.body;
+    const { title, author, rating, genre, quantity, image } = req.body;
 
-    if (!title || !author || !genre || !quantity) {
+    if (!title || !author || !genre || !quantity || !image) {
       return res.status(400).json({
         status: false,
         message: "All fields are required",
@@ -26,6 +27,7 @@ export const addBook = async (req, res) => {
       rating: !rating ? 0 : rating,
       genre,
       quantity,
+      image,
     });
 
     await newBook.save();
@@ -36,11 +38,13 @@ export const addBook = async (req, res) => {
     });
   } catch (err) {
     if (err.name === "ValidationError") {
+      console.log("validation error", err);
       return res.status(400).json({
         status: false,
         message: err.message,
       });
     }
+    console.log("err");
     return res.status(500).json({
       status: false,
       message: err.message,
@@ -217,6 +221,86 @@ export const returnBook = async (req, res) => {
     return res.status(500).json({
       status: false,
       message: "Internal server error",
+    });
+  }
+};
+
+// <-----------------------------------Get all books--------------------------->
+export const getAllBooks = async (req, res) => {
+  try {
+    const books = await Book.find(
+      {},
+      {
+        title: 1,
+        author: 1,
+        rating: 1,
+        genre: 1,
+        quantity: 1,
+        image: 1,
+      },
+    );
+    return res.status(200).json({
+      status: true,
+      message: "Books fetched successfuly",
+      books: books,
+    });
+  } catch (err) {
+    return res.status(500).json({
+      status: false,
+      message: "Internal server error",
+    });
+  }
+};
+
+// <-----------------------------------Get book by title--------------------------->
+
+export const getBookById = async (req, res) => {
+  try {
+    let { id } = req.params;
+
+    id = id.trim();
+    if (!id) {
+      return res.status(400).json({
+        status: false,
+        message: "Book id is required",
+      });
+    }
+
+    const validMongoId = mongoose.Types.ObjectId.isValid(id);
+
+    if (!validMongoId) {
+      return res.status(400).json({
+        status: false,
+        message: "Invalid book id",
+      });
+    }
+
+    const book = await Book.findById(id, {
+      title: 1,
+      author: 1,
+      rating: 1,
+      genre: 1,
+      quantity: 1,
+      image: 1,
+    });
+
+    if (!book) {
+      return res.status(400).json({
+        status: false,
+        message: "Book not found",
+      });
+    }
+
+    return res.status(200).json({
+      status: true,
+      message: "Book Details fetched successfuly",
+      book: book,
+    });
+  } catch (err) {
+    console.log(err);
+    return res.status(500).json({
+      status: false,
+      message: "Internal sever error",
     });
   }
 };

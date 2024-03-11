@@ -5,35 +5,13 @@ import { generateTemporaryToken } from "./generateAccessAndRefreshToken.js";
 
 export const sendEmailToUser = async ({ email, userId }) => {
   try {
-    // Create a hash value
-    const salt = bcrypt.genSaltSync(10);
-    const hashToken = await bcrypt.hash(userId.toString(), salt);
-
-    // Store this hash value in database for authentication
-
-    // const user = await User.findOneAndUpdate(
-    //   userId,
-    //   {
-    //     $set: {
-    //       forgetPasswordToken: hashToken,
-    //       forgetPasswordTokenExpiry: Date.now() + 60 * 60 * 1000,
-    //     },
-    //   },
-    //   {
-    //     new: true,
-    //   },
-    // );
-    //
-
     const user = await User.findById(userId);
 
     const { unHashedToken, hashedToken, tokenExpiry } =
       generateTemporaryToken();
     (user.forgotPasswordToken = hashedToken),
       (user.forgotPasswordTokenExpiry = tokenExpiry);
-
     const newUser = await user.save({ validateBeforeSave: false });
-
     // Create a nodemailer transporter instance which is responsible to send a mail
     const transporter = nodemailer.createTransport({
       host: process.env.MAILTRAP_SMTP_HOST,

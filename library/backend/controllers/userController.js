@@ -146,6 +146,7 @@ export const loginUser = async (req, res) => {
       .cookie("refreshToken", refreshToken, options)
       .json({
         status: true,
+        message: "User login successfully",
         loggedInUser,
       });
   } catch (err) {
@@ -255,6 +256,7 @@ export const forgetPassword = async (req, res) => {
       .createHash("sha256")
       .update(unHashedToken)
       .digest("hex");
+
     const user = await User.findOne({
       forgotPasswordToken,
       // forgotPasswordExpiry: { $gt: Date.now() },
@@ -280,7 +282,10 @@ export const forgetPassword = async (req, res) => {
 
     await user.save({ validateBeforeSave: false });
 
-    return res.send("Password change successfully");
+    return res.status(200).json({
+      status: true,
+      message: "Password changed successfully",
+    });
   } catch (err) {
     console.log(err);
     return res.status(500).json({

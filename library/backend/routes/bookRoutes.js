@@ -3,6 +3,8 @@ import {
   addBook,
   borrowBook,
   deleteBook,
+  getAllBooks,
+  getBookById,
   returnBook,
   updateBook,
 } from "../controllers/bookController.js";
@@ -20,5 +22,7 @@ router.post("/deletebook/:title", verifyJWT, adminAndUserAuth, deleteBook);
 
 router.post("/borrowbook/:title", verifyJWT, borrowBook);
 router.post("/returnbook/:title", verifyJWT, returnBook);
+router.get("/getbooks", verifyJWT, getAllBooks);
+router.get("/getbook/:id", verifyJWT, getBookById);
 
 export default router;
